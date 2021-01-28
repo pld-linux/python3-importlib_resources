@@ -7,7 +7,7 @@ Summary:	Read resources from Python packages
 Summary(pl.UTF-8):	Odczyt zasobów z pakietów Pythona
 Name:		python3-importlib_resources
 Version:	5.1.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/importlib-resources/
@@ -17,7 +17,7 @@ Patch0:		%{name}-no_wheel.patch
 URL:		https://pypi.org/project/importlib-resources/
 BuildRequires:	python3-modules >= 1:3.6
 BuildRequires:	python3-setuptools
-BuildRequires:	python3-setuptools_scm >= 3.4.1
+BuildRequires:	python3-setuptools_scm >= 5.0.1-2
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
