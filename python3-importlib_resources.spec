@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	doc	# Sphinx documentation
-%bcond_with	tests	# unit tests
+%bcond_without	tests	# unit tests
 
 Summary:	Read resources from Python packages
 Summary(pl.UTF-8):	Odczyt zasobów z pakietów Pythona
@@ -16,11 +16,23 @@ Source0:	https://files.pythonhosted.org/packages/source/i/importlib-resources/im
 Patch0:		%{name}-no_wheel.patch
 URL:		https://pypi.org/project/importlib-resources/
 BuildRequires:	python3-modules >= 1:3.6
-BuildRequires:	python3-setuptools
+BuildRequires:	python3-setuptools >= 1:42
 BuildRequires:	python3-setuptools_scm >= 5.0.1-2
+BuildRequires:	python3-toml
+%if %{with tests}
+BuildRequires:	python3-pytest >= 3.5
+BuildRequires:	python3-pytest-black >= 0.3.7
+BuildRequires:	python3-pytest-cov
+BuildRequires:	python3-pytest-flake8
+%if "%{py3_ver}" < "3.8"
+BuildRequires:	python3-zipp >= 0.4
+%endif
+%endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
+BuildRequires:	python3-jaraco.packaging >= 8.2
+BuildRequires:	python3-rst.linker >= 1.9
 BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python3-modules >= 1:3.6
@@ -85,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE README.rst
+%doc CHANGES.rst LICENSE README.rst
 %{py3_sitescriptdir}/importlib_resources
 %{py3_sitescriptdir}/importlib_resources-%{version}-py*.egg-info
 
