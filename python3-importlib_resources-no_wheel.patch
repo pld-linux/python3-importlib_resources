@@ -1,9 +1,0 @@
---- importlib_resources-5.1.0/pyproject.toml.orig	2021-01-19 04:22:15.000000000 +0100
-+++ importlib_resources-5.1.0/pyproject.toml	2021-01-28 10:40:23.751707228 +0100
-@@ -1,5 +1,5 @@
- [build-system]
--requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4.1"]
-+requires = ["setuptools>=42", "setuptools_scm[toml]>=3.4.1"]
- build-backend = "setuptools.build_meta"
- 
- [tool.black]
