@@ -7,7 +7,7 @@ Summary:	Read resources from Python packages
 Summary(pl.UTF-8):	Odczyt zasobów z pakietów Pythona
 Name:		python3-importlib_resources
 Version:	6.1.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/importlib-resources/
