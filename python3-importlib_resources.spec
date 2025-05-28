@@ -6,19 +6,20 @@
 Summary:	Read resources from Python packages
 Summary(pl.UTF-8):	Odczyt zasobów z pakietów Pythona
 Name:		python3-importlib_resources
-Version:	6.1.0
-Release:	3
+Version:	6.5.2
+Release:	1
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/importlib-resources/
 Source0:	https://files.pythonhosted.org/packages/source/i/importlib-resources/importlib_resources-%{version}.tar.gz
-# Source0-md5:	525d238db212bdec2df06c0d4b479e73
+# Source0-md5:	6ba34e0f24dc7521a5e44e707ed0f28f
 URL:		https://pypi.org/project/importlib-resources/
 BuildRequires:	python3-modules >= 1:3.8
 BuildRequires:	python3-setuptools >= 1:56
 BuildRequires:	python3-setuptools_scm >= 3.4.1
 BuildRequires:	python3-toml
 %if %{with tests}
+BuildRequires:	python3-jaraco.test
 #BuildRequires:	python3-black >= 0.3.7
 #BuildRequires:	python3-checkdocs >= 2.4
 #BuildRequires:	python3-cov
@@ -42,8 +43,7 @@ BuildRequires:	python3-jaraco.packaging >= 9.3
 BuildRequires:	python3-jaraco.tidelift >= 1.4
 BuildRequires:	python3-rst.linker >= 1.9
 #BuildRequires:	python3-sphinx-lint
-BuildRequires:	sphinx-pdg-3 >= 3.5
-BuildRequires:	sphinx-pdg-3 < 7.2.5
+BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python3-modules >= 1:3.8
 BuildArch:	noarch
