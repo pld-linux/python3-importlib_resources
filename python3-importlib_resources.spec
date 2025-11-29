@@ -14,24 +14,21 @@ Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/i/importlib-resources/importlib_resources-%{version}.tar.gz
 # Source0-md5:	6ba34e0f24dc7521a5e44e707ed0f28f
 URL:		https://pypi.org/project/importlib-resources/
-BuildRequires:	python3-modules >= 1:3.8
-BuildRequires:	python3-setuptools >= 1:56
+BuildRequires:	python3-modules >= 1:3.9
+BuildRequires:	python3-setuptools >= 1:61.2
 BuildRequires:	python3-setuptools_scm >= 3.4.1
-BuildRequires:	python3-toml
 %if %{with tests}
-BuildRequires:	python3-jaraco.test
+BuildRequires:	python3-jaraco.test >= 5.4
 #BuildRequires:	python3-black >= 0.3.7
 #BuildRequires:	python3-checkdocs >= 2.4
 #BuildRequires:	python3-cov
 #BuildRequires:	python3-enabler >= 2.2
-#BuildRequires:	python3-mypy >= 0.9.1
-#BuildRequires:	python3-pytest >= 6
-#BuildRequires:	python3-pytest-black >= 0.3.7
+BuildRequires:	python3-pytest >= 6
 #BuildRequires:	python3-pytest-checkdocs >= 2.4
 #BuildRequires:	python3-pytest-cov
-#BuildRequires:	python3-pytest-enabler >= 1.0.1
-#BuildRequires:	python3-pytest-flake8
-#BuildRequires:	python3-pytest-mypy
+#BuildRequires:	python3-pytest-enabler >= 2.2
+#BuildRequires:	python3-pytest-mypy >= 0.9.1
+#BuildRequires:	python3-pytest-ruff >= 0.2.1
 #BuildRequires:	python3-ruff
 BuildRequires:	python3-zipp >= 3.17
 %endif
@@ -43,9 +40,9 @@ BuildRequires:	python3-jaraco.packaging >= 9.3
 BuildRequires:	python3-jaraco.tidelift >= 1.4
 BuildRequires:	python3-rst.linker >= 1.9
 #BuildRequires:	python3-sphinx-lint
-BuildRequires:	sphinx-pdg-3
+BuildRequires:	sphinx-pdg-3 >= 3.5
 %endif
-Requires:	python3-modules >= 1:3.8
+Requires:	python3-modules >= 1:3.9
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
