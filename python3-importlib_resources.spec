@@ -7,7 +7,7 @@ Summary:	Read resources from Python packages
 Summary(pl.UTF-8):	Odczyt zasobów z pakietów Pythona
 Name:		python3-importlib_resources
 Version:	6.5.2
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/importlib-resources/
@@ -43,6 +43,7 @@ BuildRequires:	python3-rst.linker >= 1.9
 BuildRequires:	sphinx-pdg-3 >= 3.5
 %endif
 Requires:	python3-modules >= 1:3.9
+Obsoletes:	python3-importlib-resources < 6.5.2-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
