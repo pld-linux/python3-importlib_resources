@@ -1,0 +1,10 @@
+--- importlib_resources-6.5.2/importlib_resources/tests/util.py.orig	2025-01-03 19:51:36.000000000 +0100
++++ importlib_resources-6.5.2/importlib_resources/tests/util.py	2025-11-30 14:47:59.855826299 +0100
+@@ -2,6 +2,7 @@ import abc
+ import contextlib
+ import functools
+ import importlib
++import importlib.abc
+ import io
+ import pathlib
+ import sys
